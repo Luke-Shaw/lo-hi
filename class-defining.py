@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Defining the classes for the game, with example of 
-in action at the end.
+Defining the classes for the game.
 
-Most recent update: DiscardPile class
-                    ^^^ still needs work, posscards
-                        working but more to be added
 
 """
 ########################
@@ -54,13 +50,16 @@ class Card:
 
 ########################
 class Deck:
-    #a deck of traditional cards
+    #A deck of traditional cards
     def __init__(self, c):
         self.cards = c
     
-    def add_card(self, Card):
-        #card is added to top of deck
-        self.cards = [Card] + self.cards #list adding
+    def take_card(self):
+        #card is taken from top of deck
+        top = self.cards[0] #Top Card
+        self.cards = self.cards[1:(len(self.cards)+1)] 
+        #Removing the top card of deck
+        return top #outputs the top card of the deck to caller
         
     def shuffle(self):
         #shuffle the deck
@@ -78,17 +77,18 @@ class Deck:
 class DiscardPile:
     #the face up cards used in lo-hi gameplay
     #items:
-    #   cards     list of all the cards in the pile, in order
-    #   posscards vector of all integers that the card added
-    #             to the pile can be.
+    #   cards     - list of all the cards in the pile, in order
+    #   posscards - vector of all integers that the card added
+    #                 to the pile can be.
+    
     def __init__(self, c):
         self.cards = c
         self.posscards = range(2,15) #initialise as all cards possible
                    
     def reset_posscards(self):
         #resets the possible cards that can be played
-        fst = self.cards[0].value
-        snd = self.cards[1].value
+        fst = self.cards[0].value #top card of discard pile
+        snd = self.cards[1].value #second...
         if (fst > snd):
             #all lower possible cards
             self.posscards = range(2, fst+1)
@@ -96,10 +96,10 @@ class DiscardPile:
             if (fst < snd):
                 #all higher possible cards
                 self.posscards = range(fst, 15)
-                
-        if ((fst in [2,14]) or (fst == snd)):
-            #special case where any can be played
-            self.posscards = range(2,15)
+            else:
+                if (fst == snd):
+                    #special case where any can be played
+                    self.posscards = range(2,15)
 
     def vis_cards(self):
         #show the 2 visible cards
@@ -112,60 +112,30 @@ class DiscardPile:
         #adds a card to the top, IF valid in lo-hi gameplay
         if (Card.value in self.posscards):
             self.cards = [Card] + self.cards
+            self.reset_posscards() 
         else:
-            #card cannpt be played!
+            #card cannot be played!
             print("*****NOT ADDED: ")
             Card.state_card()
             print("CANNOT BE PLAYED*****")
 ########################
-
-
-
+            
+            
+            
 ########################
-#EXAMPLES / WORKING
-c1 = Card('H', 12)
-c1.state_card()
-c2 = Card('D', 2)
-c3 = Card('C', 9)
+class Hand:
 
-d = Deck([c1, c2])
-
-d.show_deck()
-
-d.add_card(c3)
-
-d.show_deck()
-d.shuffle()
-d.show_deck()
-
-d.cards[1].state_card()
-
-
-c1 = Card('H', 12)
-c2 = Card('D', 2)
-c3 = Card('C', 9)
-dp = DiscardPile([c1,c2,c3])
-dp.vis_cards()
-dp.posscards #defaults to all cards
-dp.reset_posscards()
-dp.posscards #the above inbuilt function resets to lo-hi rules
-
-c4 = Card('S', 14) #ACDC... c4.state_card()
-dp.add_card(c4)
-c5 = Card('S', 8)
-dp.add_card(c5)
-dp.reset_posscards
-dp.vis_cards()
-dp.posscards
-
-
-
-
-
-
-
-
-
-
-
-
+    def __init__(self, c):
+        self.cards = c
+    
+    
+    #take card from deck
+    
+    
+    
+    #discard card from hand
+    
+    
+    
+    
+    #
