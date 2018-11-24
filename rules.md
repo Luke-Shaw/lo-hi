@@ -16,7 +16,7 @@ Whether a card can be played depends on the previous two cards. If the top card 
 
 Henceforth in this document, "higher than" really means "higher than or equal to" and similarly "lower than" means "lower than or equal to".
 
-### Doubles, Triples, and Quadruples
+#### Doubles, Triples, and Quadruples
 
 If a card is played on top of a card the same value, the player decides whether the next player must play higher or lower. The exception to this rule is for Aces and Twos, where the next player can play any card (as it is impossible to play higher/lower than an Ace/two, respectively).
 
@@ -26,19 +26,19 @@ If a card is the fourth of the same value, the player playing the fourth card sa
 
 A player can play multiple cards at once. For example, if a King was the previous card and the player who's turn it was had two kings, they could play both at once and have therefore played a triple.
 
-### Runs
+#### Runs
 
 Consecutive cards of length at least 3 can be played at once, as a run. This reverses the order of play. The player playing the run must order the run following whether they are supposed to be playing higher or lower, for example if the previous two cards are an 8 followed by a Jack, the run 4,5,6 must be played in the order 6 then 5 then 4. After this run is played, the next player must play higher than a 4, as the 4 is lower than the previous card: a 5.
 
-### Pick up Pick up Pick up
+#### Pick up Pick up Pick up
 
 If for three consecutive moves players pick up, which would be either because they couldn't play any card or chose not to, the top card from the deck is turned over and becomes the top of the discard pile. Whether the next player plays higher or lower is the same as what was for the previous card. Say, for example, three consecutive pick ups happened because a Queen was down with HIGHER and nobody played a Queen, King or Ace. The card from the top of the deck comes with HIGHER attached, meaning the next card played must be higher. Note this applies even if the card was a King, and would likely result in three more pick ups (because if people couldn't play higher than a queen they likely can't play higher than a King).
 
-### End of the deck
+#### End of the deck
 
 If the end of the deck is reached, the discard pile is shuffled and becomes the deck, with the top card from the discard pile still being the next to play on with all rules attached.
 
-### Quick-fire Rules to remember
+## Quick-fire Rules to remember
 
 * Suits do not matter
 * Aces are high
@@ -53,8 +53,6 @@ If the end of the deck is reached, the discard pile is shuffled and becomes the 
 
 Suppose Alice, Balice, and Calice are in the middle of playing a game of lo-hi. For simplicity, we shall refer to them by their first initials. A won the first round, B won the second and third round, and C has yet to win a round.
 
-### Set up
-
 So, at the start of round four, A is dealt 6 cards, B is dealt 7 cards, and C is dealt 5 cards.
 
 A hand: 6 :hearts:, 8 :clubs:, 9 :clubs:, 10 :spades:, Jack :hearts:, King :diamonds:  
@@ -64,8 +62,6 @@ C hand: 3 :clubs:, 4 :hearts:, 9 :hearts:, Queen :hearts:, Queen :diamonds:
 First face up card: 7 :hearts:
 
 As suits are not important, from now on cards will not be referred to with suits attached.
-
-### Game play
 
 * C is first to act, as they have the fewest cards (5) in their hand, which is a direct result of not having won any of the previous rounds. C can play any card, so plays their 9.
 
@@ -81,10 +77,10 @@ As suits are not important, from now on cards will not be referred to with suits
 
 * B plays their two Aces. As this is a double they can state higher or lower, but it is irrelevant as the next card must be lower than an Ace.
 
-The current state of the round is as follows:
-A hand: 6, King, Ace
-B hand: 10
-C hand: 2,3,4,Queen,Queen
+The current state of the round is as follows:  
+A hand: 6, King, Ace  
+B hand: 10  
+C hand: 2, 3, 4, Queen, Queen  
 
 Top face up card: Ace
 Second face up card: Ace
