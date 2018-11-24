@@ -56,7 +56,7 @@ Suppose Alice, Balice, and Calice are in the middle of playing a game of lo-hi. 
 So, at the start of round four, A is dealt 6 cards, B is dealt 7 cards, and C is dealt 5 cards.
 
 A hand: 6 :hearts:, 8 :clubs:, 9 :clubs:, 10 :spades:, Jack :hearts:, King :diamonds:  
-B hand: 2 :clubs:, 10 :diamonds:, King :hearts:, King :spades:, King :clubs:, Ace :hearts:, Ace :clubs:  
+B hand: 2 :clubs:, 7 :hearts:, 7 :spades:, 7 :clubs:, 10 :diamonds:,  Ace :hearts:, Ace :clubs:  
 C hand: 3 :clubs:, 4 :hearts:, 9 :hearts:, Queen :hearts:, Queen :diamonds:  
 
 First face up card: 7 :hearts:
@@ -69,7 +69,7 @@ As suits are not important, from now on cards will not be referred to with suits
 
 * A now has to play higher than a 2, which means they can play any card. They elect to play the run 8,9,10,Jack. It is important that the run is in that order, as they are playing higher.
 
-* B plays next, as the playing order is reversed by the run. B has to play lower than a Jack, as a Jack is higher than a 10. B chooses to play the their three Kings (a triple), and states that the next card must be an Ace.
+* B plays next, as the playing order is reversed by the run. B has to play lower than a Jack, as a Jack is higher than a 10. B chooses to play the their three 7s (a triple), and states that the next card must be an Ace.
 
 * C picks up, as they have no Ace. They pick up a 2.
 
@@ -82,7 +82,7 @@ A hand: 6, King, Ace
 B hand: 10  
 C hand: 2, 3, 4, Queen, Queen  
 
-Top face up card: Ace
+Top face up card: Ace   
 Second face up card: Ace
 
 It is C's turn to act.
@@ -95,9 +95,9 @@ It is C's turn to act.
 
 * C picks up, as they cannot play any card higher than a Queen.
 
-* As there have now been three pick-ups in a row, the top card from the deck is placed face up on the discard pile. It is a 7.
+* As there have now been three pick-ups in a row, the top card from the deck is placed face up on the discard pile. It is an 8.
 
-* Whilst 7 is lower than a Queen, the next player must play higher than a 7 as they were previously having to play higher than a Queen. They are not playing higher because a 7 is lower than a Queen. It is A's turn, and they plays their J
+* Whilst 8 is lower than a Queen, the next player must play higher than a 8 as they were previously having to play higher than a Queen. They are not playing higher because a 8 is lower than a Queen. It is A's turn, and they plays their J
 
 * B plays their two 10s, and has won the round as they have no cards left.
 
