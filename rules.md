@@ -53,13 +53,13 @@ If the end of the deck is reached, the discard pile is shuffled and becomes the 
 
 Suppose Alice, Balice, and Calice are in the middle of playing a game of lo-hi. For simplicity, we shall refer to them by their first initials. A won the first round, B won the second and third round, and C has yet to win a round.
 
-###Set up
+### Set up
 
 So, at the start of round four, A is dealt 6 cards, B is dealt 7 cards, and C is dealt 5 cards.
 
-A hand: 6 :hearts:, 8 :clubs:, 9 :clubs:, 10 :spades:, Jack :hearts:, King :diamonds:
-B hand: 2 :clubs:, 10 :diamonds:, King :hearts:, King :spades:, King :clubs:, Ace :hearts:, Ace :clubs:
-C hand: 3 :clubs:, 4 :hearts:, 9 :hearts:, Queen :hearts:, Queen :diamonds:
+A hand: 6 :hearts:, 8 :clubs:, 9 :clubs:, 10 :spades:, Jack :hearts:, King :diamonds:  
+B hand: 2 :clubs:, 10 :diamonds:, King :hearts:, King :spades:, King :clubs:, Ace :hearts:, Ace :clubs:  
+C hand: 3 :clubs:, 4 :hearts:, 9 :hearts:, Queen :hearts:, Queen :diamonds:  
 
 First face up card: 7 :hearts:
 
