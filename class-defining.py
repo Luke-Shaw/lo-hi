@@ -18,7 +18,9 @@ class Card:
     def __init__(self, s, v):
         self.suit = s
         self.value = v
-    
+        
+    def __eq__(self, other): 
+        return self.__dict__ == other.__dict__    
 
     def state_card(self):
     #state_card outputs in "proper english" what the card is
@@ -54,20 +56,23 @@ class Deck:
     def __init__(self, c):
         self.cards = c
     
-    def take_card(self):
-        #card is taken from top of deck
-        top = self.cards[0] #Top Card
-        self.cards = self.cards[1:(len(self.cards)+1)] 
-        #Removing the top card of deck
-        return top #outputs the top card of the deck to caller
+    def take_card(self, n=1):
+        #n cards are taken from top of deck
+        top = self.cards[:n] #Top n cards
+        self.cards = self.cards[n:] 
+        #Removing the top cards from deck
+        return top #outputs the top cards of the deck to caller
         
     def shuffle(self):
         #shuffle the deck
         random.shuffle(self.cards)
     
-    def show_deck(self):
-        #show the whole deck, top card first. 
-        for c in self.cards:
+    def show(self, n=52):
+        #Show the top n cards of the deck
+        if n > len(self.cards):
+            n = len(self.cards) #show all if n > num cards in deck
+        #show the top n cards, top card first. 
+        for c in self.cards[:n]:
             c.state_card()
 ########################
 
@@ -105,8 +110,16 @@ class DiscardPile:
         #show the 2 visible cards
         print("Top card: ")
         self.cards[0].state_card()
-        print("2nd card: ")
-        self.cards[1].state_card()
+        try:
+            print("2nd card: ")
+            self.cards[1].state_card()
+        except IndexError:
+            print("Doesn't exist brother: you're at the bottom of the pile")
+
+    def show_all(self):
+        #show the whole deck, top card first. 
+        for c in self.cards:
+            c.state_card()
 
     def add_card(self, Card):
         #adds a card to the top, IF valid in lo-hi gameplay
@@ -128,14 +141,33 @@ class Hand:
     def __init__(self, c):
         self.cards = c
     
-    
-    #take card from deck
-    
-    
-    
+    def show_all(self):
+        #show all cards
+        for c in self.cards:
+            c.state_card()
+
+    def add_card(self, Deck):
+        #Given the Deck, take the top card
+        #self.cards = Deck.take_card() + self.cards
+        self.cards.extend(Deck.take_card())
+        
     #discard card from hand
-    
-    
-    
-    
-    #
+    def play_card(self, DiscardPile, Card):
+        #play a card from the Hand into the DiscardPile
+        if (Card in self.cards):
+            DiscardPile.add_card(Card)
+            self.cards.remove(Card)
+        else:
+            raise Exception('Card not in Hand')
+        
+        
+########################
+
+
+
+
+
+
+
+
+
